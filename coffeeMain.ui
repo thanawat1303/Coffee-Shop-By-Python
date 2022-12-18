@@ -1,0 +1,2450 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1100</width>
+    <height>695</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1100</width>
+    <height>695</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1100</width>
+    <height>695</height>
+   </size>
+  </property>
+  <property name="sizeIncrement">
+   <size>
+    <width>0</width>
+    <height>0</height>
+   </size>
+  </property>
+  <property name="baseSize">
+   <size>
+    <width>0</width>
+    <height>0</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Coffee shop</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="shopName">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>-11</y>
+      <width>218</width>
+      <height>166</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Monotype Corsiva</family>
+      <pointsize>28</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">* {
+color:white;
+padding-top:-10px;
+padding-bottom:10px;
+background-color:#8b5234;
+border:0 solid;
+}</string>
+    </property>
+    <property name="text">
+     <string>Coffee Shop</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignJustify|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QTabWidget" name="bodyShop">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1101</width>
+      <height>697</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="font">
+     <font>
+      <family>DSN NamKang</family>
+      <pointsize>26</pointsize>
+      <kerning>true</kerning>
+     </font>
+    </property>
+    <property name="accessibleName">
+     <string>bodyShop</string>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QTabBar::tab{
+	border-top:1px solid  rgb(218, 209, 192);
+	border-bottom:1px solid  rgb(218, 209, 192);
+	width:217.5;
+	height:178;
+	background-color:white;
+	color: rgba(255, 255, 255, 0);
+}
+
+QTabBar::tab:selected{
+	background-color: #f4ac7d;
+}
+
+QTabBar::tab:first
+{
+	margin:155 0 0 0;
+}
+
+QWidget:pane{
+}
+
+</string>
+    </property>
+    <property name="tabPosition">
+     <enum>QTabWidget::West</enum>
+    </property>
+    <property name="currentIndex">
+     <number>1</number>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>20</width>
+      <height>20</height>
+     </size>
+    </property>
+    <widget class="QWidget" name="allmenu">
+     <property name="accessibleName">
+      <string>allmenu</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <attribute name="title">
+      <string>MENU</string>
+     </attribute>
+     <widget class="QTabWidget" name="menu_sell">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>-2</y>
+        <width>881</width>
+        <height>711</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>DSN SukSaWat</family>
+        <pointsize>26</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="accessibleName">
+       <string>menu_sell</string>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">::tab{
+	background-color:#8b5234;
+	border-left:1px solid rgb(218, 209, 192);
+}
+
+
+QTabBar::tab{
+	width:216;
+	height:156;
+	margin:0;
+	color:white;
+}
+
+QTabBar::tab:selected{
+	padding-bottom:5px;
+	padding-top:-5px;
+}
+
+QWidget:pane{
+	padding:-19;
+}</string>
+      </property>
+      <property name="currentIndex">
+       <number>2</number>
+      </property>
+      <widget class="QWidget" name="coffee">
+       <property name="font">
+        <font>
+         <family>DSN AmPun Solid</family>
+         <pointsize>16</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="accessibleName">
+        <string>coffee</string>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font-size:16;</string>
+       </property>
+       <attribute name="title">
+        <string>กาแฟ</string>
+       </attribute>
+       <widget class="QScrollArea" name="listCoffee">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>20</y>
+          <width>882</width>
+          <height>541</height>
+         </rect>
+        </property>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>882</width>
+          <height>541</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>882</width>
+          <height>541</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: #8b5234;</string>
+        </property>
+        <property name="verticalScrollBarPolicy">
+         <enum>Qt::ScrollBarAlwaysOff</enum>
+        </property>
+        <property name="horizontalScrollBarPolicy">
+         <enum>Qt::ScrollBarAlwaysOff</enum>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignHCenter|Qt::AlignTop</set>
+        </property>
+        <widget class="QWidget" name="list">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>0</y>
+           <width>880</width>
+           <height>193</height>
+          </rect>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>193</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QFrame {
+	background-color: rgb(255, 255, 255);
+	border:0px;
+	border-radius:32;
+}</string>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout">
+          <item>
+           <widget class="QFrame" name="listcoffee">
+            <property name="enabled">
+             <bool>true</bool>
+            </property>
+            <property name="accessibleName">
+             <string>listcoffee</string>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(255, 255, 255);</string>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <widget class="QLabel" name="name">
+             <property name="geometry">
+              <rect>
+               <x>180</x>
+               <y>8</y>
+               <width>501</width>
+               <height>51</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <family>DSN Single</family>
+               <pointsize>21</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="text">
+              <string>อเมริกาโน่เย็น</string>
+             </property>
+            </widget>
+            <widget class="QLabel" name="textBath">
+             <property name="geometry">
+              <rect>
+               <x>220</x>
+               <y>120</y>
+               <width>91</width>
+               <height>36</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <family>DSN PatPong Extend</family>
+               <pointsize>14</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::VLine</enum>
+             </property>
+             <property name="text">
+              <string>50</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+             </property>
+            </widget>
+            <widget class="QFrame" name="numOrder">
+             <property name="geometry">
+              <rect>
+               <x>680</x>
+               <y>10</y>
+               <width>151</width>
+               <height>51</height>
+              </rect>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton {
+	border-radius:16px;
+	border:0 solid;
+	color:white;
+	padding-bottom:3px;
+	background-color:#8b5234;
+}
+
+QPushButton:pressed {
+	background-color:;
+	background-color: rgb(188, 109, 70);
+}</string>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+             <widget class="QPushButton" name="positive">
+              <property name="geometry">
+               <rect>
+                <x>110</x>
+                <y>10</y>
+                <width>33</width>
+                <height>33</height>
+               </rect>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>14</pointsize>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">*:pressed{
+	padding-left:2px;
+}</string>
+              </property>
+              <property name="text">
+               <string>+</string>
+              </property>
+             </widget>
+             <widget class="QPushButton" name="negative">
+              <property name="geometry">
+               <rect>
+                <x>10</x>
+                <y>10</y>
+                <width>33</width>
+                <height>33</height>
+               </rect>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>16</pointsize>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">* :pressed{
+	padding-right:2px;
+}</string>
+              </property>
+              <property name="text">
+               <string>-</string>
+              </property>
+             </widget>
+             <widget class="QLineEdit" name="num">
+              <property name="geometry">
+               <rect>
+                <x>42</x>
+                <y>10</y>
+                <width>71</width>
+                <height>33</height>
+               </rect>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>15</pointsize>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">* {
+	
+	background-color: rgba(255, 255, 255, 0);
+	border:0;
+}</string>
+              </property>
+              <property name="text">
+               <string>0</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </widget>
+            <widget class="QLabel" name="iconBath">
+             <property name="geometry">
+              <rect>
+               <x>180</x>
+               <y>120</y>
+               <width>35</width>
+               <height>35</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>5</pointsize>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true"/>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="pixmap">
+              <pixmap>assets/img_shop/Bath.png</pixmap>
+             </property>
+             <property name="scaledContents">
+              <bool>true</bool>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+            <widget class="QFrame" name="radioGroup">
+             <property name="geometry">
+              <rect>
+               <x>180</x>
+               <y>65</y>
+               <width>341</width>
+               <height>41</height>
+              </rect>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+             <widget class="QRadioButton" name="normal">
+              <property name="geometry">
+               <rect>
+                <x>112</x>
+                <y>10</y>
+                <width>95</width>
+                <height>20</height>
+               </rect>
+              </property>
+              <property name="font">
+               <font>
+                <family>DSN AnuRak</family>
+                <pointsize>14</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>หวานปกติ</string>
+              </property>
+             </widget>
+             <widget class="QRadioButton" name="max">
+              <property name="geometry">
+               <rect>
+                <x>220</x>
+                <y>10</y>
+                <width>95</width>
+                <height>20</height>
+               </rect>
+              </property>
+              <property name="font">
+               <font>
+                <family>DSN AnuRak</family>
+                <pointsize>14</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>หวานมาก</string>
+              </property>
+             </widget>
+             <widget class="QRadioButton" name="min">
+              <property name="geometry">
+               <rect>
+                <x>4</x>
+                <y>10</y>
+                <width>95</width>
+                <height>20</height>
+               </rect>
+              </property>
+              <property name="font">
+               <font>
+                <family>DSN AnuRak</family>
+                <pointsize>14</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>หวานน้อย</string>
+              </property>
+             </widget>
+            </widget>
+            <widget class="QLabel" name="img">
+             <property name="geometry">
+              <rect>
+               <x>40</x>
+               <y>20</y>
+               <width>100</width>
+               <height>133</height>
+              </rect>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: rgba(255, 255, 255, 0);
+border:1.5 solid #8b5234;
+border-radius:0px;</string>
+             </property>
+             <property name="inputMethodHints">
+              <set>Qt::ImhNone</set>
+             </property>
+             <property name="pixmap">
+              <pixmap>assets/coffee/เอสเปรสโซ่_optimized.png</pixmap>
+             </property>
+             <property name="scaledContents">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="ice_drink">
+       <attribute name="title">
+        <string>เครื่องดื่มเย็น</string>
+       </attribute>
+       <widget class="QScrollArea" name="listIce_drink">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>20</y>
+          <width>882</width>
+          <height>541</height>
+         </rect>
+        </property>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>882</width>
+          <height>541</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>882</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color:#8b5234;</string>
+        </property>
+        <property name="verticalScrollBarPolicy">
+         <enum>Qt::ScrollBarAlwaysOff</enum>
+        </property>
+        <property name="horizontalScrollBarPolicy">
+         <enum>Qt::ScrollBarAlwaysOff</enum>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignHCenter|Qt::AlignTop</set>
+        </property>
+        <widget class="QWidget" name="menu_ice">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>0</y>
+           <width>880</width>
+           <height>193</height>
+          </rect>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>193</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QFrame {
+	background-color: rgb(255, 255, 255);
+	border:0px;
+	border-radius:32;
+}</string>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_2">
+          <item>
+           <widget class="QFrame" name="ice_drinkMenu">
+            <property name="enabled">
+             <bool>true</bool>
+            </property>
+            <property name="accessibleName">
+             <string>listcoffee</string>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(255, 255, 255);</string>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <widget class="QLabel" name="name_ice">
+             <property name="geometry">
+              <rect>
+               <x>180</x>
+               <y>8</y>
+               <width>139</width>
+               <height>51</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <family>DSN Single</family>
+               <pointsize>21</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="text">
+              <string>โก้โก้</string>
+             </property>
+            </widget>
+            <widget class="QLabel" name="textBath_ice">
+             <property name="geometry">
+              <rect>
+               <x>220</x>
+               <y>120</y>
+               <width>35</width>
+               <height>35</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <family>DSN PatPong Extend</family>
+               <pointsize>14</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::VLine</enum>
+             </property>
+             <property name="text">
+              <string>50</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+            <widget class="QFrame" name="numOrder_ice">
+             <property name="geometry">
+              <rect>
+               <x>680</x>
+               <y>10</y>
+               <width>151</width>
+               <height>51</height>
+              </rect>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton {
+	border-radius:16px;
+	border:0 solid;
+	color:white;
+	padding-bottom:3px;
+	background-color:rgb(0, 0, 127);
+}
+
+QPushButton:pressed {
+	padding-left:2px;
+	padding-bottom:5px;
+	background-color:rgb(0, 0, 255);
+}</string>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+             <widget class="QPushButton" name="positive_ice">
+              <property name="geometry">
+               <rect>
+                <x>110</x>
+                <y>10</y>
+                <width>33</width>
+                <height>33</height>
+               </rect>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>14</pointsize>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="text">
+               <string>+</string>
+              </property>
+             </widget>
+             <widget class="QPushButton" name="negative_ice">
+              <property name="geometry">
+               <rect>
+                <x>10</x>
+                <y>10</y>
+                <width>33</width>
+                <height>33</height>
+               </rect>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>16</pointsize>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="text">
+               <string>-</string>
+              </property>
+             </widget>
+             <widget class="QLineEdit" name="num_ice">
+              <property name="geometry">
+               <rect>
+                <x>52</x>
+                <y>10</y>
+                <width>51</width>
+                <height>33</height>
+               </rect>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>15</pointsize>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">* {
+	border:0;
+}</string>
+              </property>
+              <property name="text">
+               <string>0</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </widget>
+            <widget class="QLabel" name="iconBathIce">
+             <property name="geometry">
+              <rect>
+               <x>180</x>
+               <y>120</y>
+               <width>35</width>
+               <height>35</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>5</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="pixmap">
+              <pixmap>Bath.png</pixmap>
+             </property>
+             <property name="scaledContents">
+              <bool>true</bool>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+            <widget class="QFrame" name="radioGroup_ice">
+             <property name="geometry">
+              <rect>
+               <x>180</x>
+               <y>65</y>
+               <width>341</width>
+               <height>41</height>
+              </rect>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+             <widget class="QRadioButton" name="normal_ice">
+              <property name="geometry">
+               <rect>
+                <x>112</x>
+                <y>10</y>
+                <width>95</width>
+                <height>20</height>
+               </rect>
+              </property>
+              <property name="font">
+               <font>
+                <family>DSN AnuRak</family>
+                <pointsize>14</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>หวานปกติ</string>
+              </property>
+             </widget>
+             <widget class="QRadioButton" name="max_ice">
+              <property name="geometry">
+               <rect>
+                <x>220</x>
+                <y>10</y>
+                <width>95</width>
+                <height>20</height>
+               </rect>
+              </property>
+              <property name="font">
+               <font>
+                <family>DSN AnuRak</family>
+                <pointsize>14</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>หวานมาก</string>
+              </property>
+             </widget>
+             <widget class="QRadioButton" name="min_ice">
+              <property name="geometry">
+               <rect>
+                <x>4</x>
+                <y>10</y>
+                <width>95</width>
+                <height>20</height>
+               </rect>
+              </property>
+              <property name="font">
+               <font>
+                <family>DSN AnuRak</family>
+                <pointsize>14</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>หวานน้อย</string>
+              </property>
+             </widget>
+            </widget>
+            <widget class="QLabel" name="img_2">
+             <property name="geometry">
+              <rect>
+               <x>30</x>
+               <y>20</y>
+               <width>127</width>
+               <height>131</height>
+              </rect>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: rgba(255, 255, 255, 0);</string>
+             </property>
+             <property name="inputMethodHints">
+              <set>Qt::ImhNone</set>
+             </property>
+             <property name="pixmap">
+              <pixmap>esIce.jpg</pixmap>
+             </property>
+             <property name="scaledContents">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="fluit_drink">
+       <attribute name="title">
+        <string>เมนูน้ำผลไม้</string>
+       </attribute>
+       <widget class="QScrollArea" name="listfluit_drink">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>20</y>
+          <width>882</width>
+          <height>541</height>
+         </rect>
+        </property>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>882</width>
+          <height>541</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>882</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color:#8b5234;
+</string>
+        </property>
+        <property name="verticalScrollBarPolicy">
+         <enum>Qt::ScrollBarAlwaysOff</enum>
+        </property>
+        <property name="horizontalScrollBarPolicy">
+         <enum>Qt::ScrollBarAlwaysOff</enum>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignHCenter|Qt::AlignTop</set>
+        </property>
+        <widget class="QWidget" name="menu_fluit">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>0</y>
+           <width>880</width>
+           <height>193</height>
+          </rect>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>193</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QFrame {
+	background-color: rgb(255, 255, 255);
+	border:0px;
+	border-radius:32;
+}</string>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_3">
+          <item>
+           <widget class="QFrame" name="fluit_drinkMenu">
+            <property name="enabled">
+             <bool>true</bool>
+            </property>
+            <property name="accessibleName">
+             <string>listcoffee</string>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(255, 255, 255);</string>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <widget class="QLabel" name="name_fluit">
+             <property name="geometry">
+              <rect>
+               <x>180</x>
+               <y>8</y>
+               <width>139</width>
+               <height>51</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <family>DSN Single</family>
+               <pointsize>21</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="text">
+              <string>แตงโมปั่น</string>
+             </property>
+            </widget>
+            <widget class="QLabel" name="textBath_fluit">
+             <property name="geometry">
+              <rect>
+               <x>220</x>
+               <y>120</y>
+               <width>35</width>
+               <height>35</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <family>DSN PatPong Extend</family>
+               <pointsize>14</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::VLine</enum>
+             </property>
+             <property name="text">
+              <string>50</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+            <widget class="QFrame" name="numOrder_fluit">
+             <property name="geometry">
+              <rect>
+               <x>680</x>
+               <y>10</y>
+               <width>151</width>
+               <height>51</height>
+              </rect>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton {
+	border-radius:16px;
+	border:0 solid;
+	color:white;
+	padding-bottom:3px;
+	background-color:rgb(0, 0, 127);
+}
+
+QPushButton:pressed {
+	padding-left:2px;
+	padding-bottom:5px;
+	background-color:rgb(0, 0, 255);
+}</string>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+             <widget class="QPushButton" name="positive_fluit">
+              <property name="geometry">
+               <rect>
+                <x>110</x>
+                <y>10</y>
+                <width>33</width>
+                <height>33</height>
+               </rect>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>14</pointsize>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="text">
+               <string>+</string>
+              </property>
+             </widget>
+             <widget class="QPushButton" name="negative_fluit">
+              <property name="geometry">
+               <rect>
+                <x>10</x>
+                <y>10</y>
+                <width>33</width>
+                <height>33</height>
+               </rect>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>16</pointsize>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="text">
+               <string>-</string>
+              </property>
+             </widget>
+             <widget class="QLineEdit" name="num_fluit">
+              <property name="geometry">
+               <rect>
+                <x>52</x>
+                <y>10</y>
+                <width>51</width>
+                <height>33</height>
+               </rect>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>15</pointsize>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">* {
+	border:0;
+}</string>
+              </property>
+              <property name="text">
+               <string>0</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </widget>
+            <widget class="QLabel" name="iconBathFluit">
+             <property name="geometry">
+              <rect>
+               <x>180</x>
+               <y>120</y>
+               <width>35</width>
+               <height>35</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>5</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="pixmap">
+              <pixmap>assets/img_shop/Bath.png</pixmap>
+             </property>
+             <property name="scaledContents">
+              <bool>true</bool>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+            <widget class="QFrame" name="radioGroup_fluit">
+             <property name="geometry">
+              <rect>
+               <x>180</x>
+               <y>65</y>
+               <width>341</width>
+               <height>41</height>
+              </rect>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+             <widget class="QRadioButton" name="normal_fluit">
+              <property name="geometry">
+               <rect>
+                <x>112</x>
+                <y>10</y>
+                <width>95</width>
+                <height>20</height>
+               </rect>
+              </property>
+              <property name="font">
+               <font>
+                <family>DSN AnuRak</family>
+                <pointsize>14</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>หวานปกติ</string>
+              </property>
+             </widget>
+             <widget class="QRadioButton" name="max_fluit">
+              <property name="geometry">
+               <rect>
+                <x>220</x>
+                <y>10</y>
+                <width>95</width>
+                <height>20</height>
+               </rect>
+              </property>
+              <property name="font">
+               <font>
+                <family>DSN AnuRak</family>
+                <pointsize>14</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>หวานมาก</string>
+              </property>
+             </widget>
+             <widget class="QRadioButton" name="min_fluit">
+              <property name="geometry">
+               <rect>
+                <x>4</x>
+                <y>10</y>
+                <width>95</width>
+                <height>20</height>
+               </rect>
+              </property>
+              <property name="font">
+               <font>
+                <family>DSN AnuRak</family>
+                <pointsize>14</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>หวานน้อย</string>
+              </property>
+             </widget>
+            </widget>
+            <widget class="QLabel" name="img_4">
+             <property name="geometry">
+              <rect>
+               <x>30</x>
+               <y>20</y>
+               <width>127</width>
+               <height>131</height>
+              </rect>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: rgba(255, 255, 255, 0);</string>
+             </property>
+             <property name="inputMethodHints">
+              <set>Qt::ImhNone</set>
+             </property>
+             <property name="pixmap">
+              <pixmap>assets/coffee/esIce.jpg</pixmap>
+             </property>
+             <property name="scaledContents">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="order">
+     <property name="accessibleName">
+      <string>order</string>
+     </property>
+     <attribute name="title">
+      <string>ORDER</string>
+     </attribute>
+     <widget class="QTabWidget" name="menu_order">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>-2</y>
+        <width>881</width>
+        <height>701</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>DSN SukSaWat</family>
+        <pointsize>24</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">::tab{
+	background-color:#8b5234;
+	border-left:1 solid rgb(218, 209, 192);
+	border-right:1 solid rgb(218, 209, 192);
+}
+
+
+QTabBar::tab{
+	width:648;
+	height:156;
+	margin:0;
+	color:white;
+}
+
+QTabBar::tab:selected{
+	border-left:0.5 solid rgb(255, 255, 255);
+	border-right:0.5 solid rgb(255, 255, 255);
+}
+
+QWidget:pane{
+	padding:-19;
+}</string>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="page_order">
+       <attribute name="title">
+        <string>เช็ครายการอาหาร</string>
+       </attribute>
+       <widget class="QScrollArea" name="listOrder">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>70</y>
+          <width>882</width>
+          <height>440</height>
+         </rect>
+        </property>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>882</width>
+          <height>440</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>882</width>
+          <height>440</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: #8b5234;</string>
+        </property>
+        <property name="verticalScrollBarPolicy">
+         <enum>Qt::ScrollBarAlwaysOff</enum>
+        </property>
+        <property name="horizontalScrollBarPolicy">
+         <enum>Qt::ScrollBarAlwaysOff</enum>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignHCenter|Qt::AlignTop</set>
+        </property>
+        <widget class="QWidget" name="list_cf_order">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>0</y>
+           <width>880</width>
+           <height>193</height>
+          </rect>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>193</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QFrame {
+	background-color: rgb(255, 255, 255);
+	border:0px;
+	border-radius:32;
+}</string>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_10">
+          <item>
+           <widget class="QFrame" name="cf_order">
+            <property name="enabled">
+             <bool>true</bool>
+            </property>
+            <property name="accessibleName">
+             <string>listcoffee</string>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(255, 255, 255);</string>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <widget class="QLabel" name="name_order_list">
+             <property name="geometry">
+              <rect>
+               <x>20</x>
+               <y>20</y>
+               <width>531</width>
+               <height>33</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <family>DSN Single</family>
+               <pointsize>20</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="text">
+              <string>1. คาปูชิโน่</string>
+             </property>
+            </widget>
+            <widget class="QLabel" name="textBath_order">
+             <property name="geometry">
+              <rect>
+               <x>452</x>
+               <y>130</y>
+               <width>351</width>
+               <height>35</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <family>DSN PatPong Extend</family>
+               <pointsize>14</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::VLine</enum>
+             </property>
+             <property name="text">
+              <string>ยอดรวม 50</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+             </property>
+            </widget>
+            <widget class="QFrame" name="buttomOrder">
+             <property name="geometry">
+              <rect>
+               <x>190</x>
+               <y>115</y>
+               <width>111</width>
+               <height>51</height>
+              </rect>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton {
+	border-radius:12px;
+	border:0 solid;
+	color:white;
+}
+
+QPushButton:selected {
+	border:0 solid;
+}</string>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+             <widget class="QPushButton" name="cancel_list_order">
+              <property name="geometry">
+               <rect>
+                <x>10</x>
+                <y>11</y>
+                <width>91</width>
+                <height>31</height>
+               </rect>
+              </property>
+              <property name="font">
+               <font>
+                <family>DSN Katreeya</family>
+                <pointsize>20</pointsize>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">* {
+	background-color: rgb(255, 0, 0);
+	
+}
+
+* :pressed{
+	border-left:1px solid red;
+	border-bottom:1px solid red;
+	background-color: qlineargradient(spread:reflect, x1:0.5, y1:0.534091, x2:0.142, y2:0.0284091, stop:0 rgba(255, 0, 0, 255), stop:1 rgba(255, 140, 140, 255))
+}</string>
+              </property>
+              <property name="text">
+               <string>Cancel</string>
+              </property>
+             </widget>
+            </widget>
+            <widget class="QFrame" name="numOrder_2">
+             <property name="geometry">
+              <rect>
+               <x>40</x>
+               <y>115</y>
+               <width>151</width>
+               <height>51</height>
+              </rect>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton {
+	border-radius:16px;
+	border:0 solid;
+	color:white;
+	padding-bottom:3px;
+	background-color:#8b5234;
+}
+
+QPushButton:pressed {
+	background-color:;
+	background-color: rgb(188, 109, 70);
+}</string>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+             <widget class="QPushButton" name="positive_order">
+              <property name="geometry">
+               <rect>
+                <x>110</x>
+                <y>10</y>
+                <width>33</width>
+                <height>33</height>
+               </rect>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>14</pointsize>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">*:pressed{
+	padding-left:2px;
+}</string>
+              </property>
+              <property name="text">
+               <string>+</string>
+              </property>
+             </widget>
+             <widget class="QPushButton" name="negative_order">
+              <property name="geometry">
+               <rect>
+                <x>10</x>
+                <y>10</y>
+                <width>33</width>
+                <height>33</height>
+               </rect>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>16</pointsize>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">* :pressed{
+	padding-right:2px;
+}</string>
+              </property>
+              <property name="text">
+               <string>-</string>
+              </property>
+             </widget>
+             <widget class="QLineEdit" name="qty_order">
+              <property name="geometry">
+               <rect>
+                <x>42</x>
+                <y>10</y>
+                <width>71</width>
+                <height>33</height>
+               </rect>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>15</pointsize>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">* {
+	
+	background-color: rgba(255, 255, 255, 0);
+	border:0;
+}</string>
+              </property>
+              <property name="text">
+               <string>0</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </widget>
+            <widget class="QLabel" name="iconBathOrder">
+             <property name="geometry">
+              <rect>
+               <x>810</x>
+               <y>128</y>
+               <width>35</width>
+               <height>35</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>5</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="pixmap">
+              <pixmap>assets/img_shop/Bath.png</pixmap>
+             </property>
+             <property name="scaledContents">
+              <bool>true</bool>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+            <widget class="QLabel" name="imgOrder">
+             <property name="geometry">
+              <rect>
+               <x>740</x>
+               <y>10</y>
+               <width>80</width>
+               <height>106</height>
+              </rect>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: rgba(255, 255, 255, 0);
+border:1.5 solid #8b5234;
+border-radius:0px;</string>
+             </property>
+             <property name="inputMethodHints">
+              <set>Qt::ImhNone</set>
+             </property>
+             <property name="pixmap">
+              <pixmap>assets/coffee/เอสเปรสโซ่_optimized.png</pixmap>
+             </property>
+             <property name="scaledContents">
+              <bool>true</bool>
+             </property>
+            </widget>
+            <widget class="QLabel" name="type_order">
+             <property name="geometry">
+              <rect>
+               <x>50</x>
+               <y>50</y>
+               <width>311</width>
+               <height>61</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <family>DSN Single</family>
+               <pointsize>18</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>หวานปกติ</string>
+             </property>
+            </widget>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+       <widget class="QFrame" name="headerOrder">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>20</y>
+          <width>881</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">* {
+	
+	background-color: rgb(255, 255, 255);
+}</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <widget class="QLabel" name="TextHeaderOrder">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>0</y>
+           <width>851</width>
+           <height>51</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>DSN PreeCha</family>
+           <pointsize>20</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>รายการทั้งหมด 4 รายการ</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QFrame" name="btPageOrder">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>510</y>
+          <width>881</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(255, 255, 255);</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <widget class="QPushButton" name="confirmOrder">
+         <property name="geometry">
+          <rect>
+           <x>365</x>
+           <y>5</y>
+           <width>150</width>
+           <height>39</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>DSN SukSaWat</family>
+           <pointsize>20</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">* {
+	border:1 solid white;
+	border-radius:19px;
+	color:white;
+	background-color: #8b5234;
+	padding-top:4;
+}
+
+* :pressed{
+	background-color: qlineargradient(spread:reflect, x1:0.5, y1:0.534091, x2:0, y2:0, stop:0 rgba(0, 0, 127, 255), stop:1 rgba(137, 137, 196, 255));
+	padding-left:3;
+}</string>
+         </property>
+         <property name="text">
+          <string>CONFIRM</string>
+         </property>
+         <property name="checked">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </widget>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="about_me">
+     <property name="accessibleName">
+      <string>about_me</string>
+     </property>
+     <attribute name="title">
+      <string>ABOUNT US</string>
+     </attribute>
+     <widget class="QTabWidget" name="about_page">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>-2</y>
+        <width>881</width>
+        <height>701</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>DSN SukSaWat</family>
+        <pointsize>24</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">::tab{
+	background-color:#8b5234;
+	border-left:1 solid rgb(218, 209, 192);
+	border-right:1 solid rgb(218, 209, 192);
+}
+
+
+QTabBar::tab{
+	width:648;
+	height:156;
+	margin:0;
+	color:white;
+}
+
+QTabBar::tab:selected{
+	border-left:0.5 solid rgb(255, 255, 255);
+	border-right:0.5 solid rgb(255, 255, 255);
+}
+
+QWidget:pane{
+	padding:-19;
+}
+</string>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="member">
+       <attribute name="title">
+        <string>สมาชิกกลุ่ม</string>
+       </attribute>
+       <widget class="QFrame" name="frame">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>20</y>
+          <width>881</width>
+          <height>541</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">* {
+	background-color:#8b5234;
+}</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_6">
+         <property name="spacing">
+          <number>18</number>
+         </property>
+         <item>
+          <widget class="QFrame" name="thanawat">
+           <property name="styleSheet">
+            <string notr="true">* {
+	background-color: white;
+	border:1px solid transparent;
+	border-radius:50;
+}</string>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Raised</enum>
+           </property>
+           <widget class="QLabel" name="imgTha">
+            <property name="geometry">
+             <rect>
+              <x>150</x>
+              <y>10</y>
+              <width>111</width>
+              <height>141</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">* {
+	border:0px solid;
+	border-radius:0px;
+	background-color: rgba(255, 255, 255, 0);
+}</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="pixmap">
+             <pixmap>assets/img_shop/Bath.png</pixmap>
+            </property>
+            <property name="scaledContents">
+             <bool>true</bool>
+            </property>
+           </widget>
+           <widget class="QFrame" name="detailTha">
+            <property name="geometry">
+             <rect>
+              <x>400</x>
+              <y>0</y>
+              <width>461</width>
+              <height>161</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">* {
+	border:0px;
+	boder-radius:0px;
+	
+	background-color: rgba(255, 255, 255, 0);
+}</string>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_7">
+             <item>
+              <widget class="QLabel" name="number1">
+               <property name="font">
+                <font>
+                 <family>DSN PreeCha</family>
+                 <pointsize>20</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">* {
+background-color: rgba(255, 255, 255, 0);
+}</string>
+               </property>
+               <property name="text">
+                <string>นายธนวัฒน์ เอี่ยมละออ</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="name1">
+               <property name="font">
+                <font>
+                 <family>DSN PreeCha</family>
+                 <pointsize>20</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">background-color: rgba(255, 255, 255, 0);</string>
+               </property>
+               <property name="text">
+                <string>รหัสนักศึกษา 116310400590-0</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="faculty">
+               <property name="font">
+                <font>
+                 <family>DSN PreeCha</family>
+                 <pointsize>20</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">background-color: rgba(255, 255, 255, 0);
+</string>
+               </property>
+               <property name="text">
+                <string>คณะวิศวกรรมศาสตร์ สาขาคอมพิวเตอร์</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </widget>
+         </item>
+         <item>
+          <widget class="QFrame" name="chattaporn">
+           <property name="styleSheet">
+            <string notr="true">* {
+	background-color: white;
+	border:1px solid transparent;
+	border-radius:50;
+}</string>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Raised</enum>
+           </property>
+           <widget class="QLabel" name="imgChat">
+            <property name="geometry">
+             <rect>
+              <x>150</x>
+              <y>10</y>
+              <width>111</width>
+              <height>141</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">* {
+	border:0px solid;
+	border-radius:0px;
+	
+	background-color: rgba(255, 255, 255, 0);
+}</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="pixmap">
+             <pixmap>assets/img_shop/Bath.png</pixmap>
+            </property>
+            <property name="scaledContents">
+             <bool>true</bool>
+            </property>
+           </widget>
+           <widget class="QFrame" name="detailChat">
+            <property name="geometry">
+             <rect>
+              <x>400</x>
+              <y>0</y>
+              <width>451</width>
+              <height>161</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">* {
+	border:0px;
+	boder-radius:0px;
+	
+	background-color: rgba(255, 255, 255, 0);
+}</string>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_8">
+             <item>
+              <widget class="QLabel" name="name2">
+               <property name="font">
+                <font>
+                 <family>DSN PreeCha</family>
+                 <pointsize>20</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">* {
+background-color: rgba(255, 255, 255, 0);
+}</string>
+               </property>
+               <property name="text">
+                <string>นางสาวฉัตรพร แก้วเฉลิม</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="number2">
+               <property name="font">
+                <font>
+                 <family>DSN PreeCha</family>
+                 <pointsize>20</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">background-color: rgba(255, 255, 255, 0);</string>
+               </property>
+               <property name="text">
+                <string>รหัสนักศึกษา 116310400245-1</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="faculty2">
+               <property name="font">
+                <font>
+                 <family>DSN PreeCha</family>
+                 <pointsize>20</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">background-color: rgba(255, 255, 255, 0);
+</string>
+               </property>
+               <property name="text">
+                <string>คณะวิศวกรรมศาสตร์ สาขาคอมพิวเตอร์</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </widget>
+         </item>
+         <item>
+          <widget class="QFrame" name="ketaphat">
+           <property name="styleSheet">
+            <string notr="true">* {
+	background-color: white;
+	border:1px solid transparent;
+	border-radius:50;
+}</string>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Raised</enum>
+           </property>
+           <widget class="QLabel" name="imgKe">
+            <property name="geometry">
+             <rect>
+              <x>150</x>
+              <y>10</y>
+              <width>111</width>
+              <height>141</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">* {
+	border:0px solid;
+	border-radius:0px;
+	background-color: rgba(255, 255, 255, 0);
+}</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="pixmap">
+             <pixmap>assets/img_shop/Bath.png</pixmap>
+            </property>
+            <property name="scaledContents">
+             <bool>true</bool>
+            </property>
+           </widget>
+           <widget class="QFrame" name="detailKe">
+            <property name="geometry">
+             <rect>
+              <x>400</x>
+              <y>0</y>
+              <width>451</width>
+              <height>161</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">* {
+	border:0px;
+	boder-radius:0px;
+	
+	background-color: rgba(255, 255, 255, 0);
+}</string>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_9">
+             <item>
+              <widget class="QLabel" name="name3">
+               <property name="font">
+                <font>
+                 <family>DSN PreeCha</family>
+                 <pointsize>20</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">* {
+background-color: rgba(255, 255, 255, 0);
+}</string>
+               </property>
+               <property name="text">
+                <string>นางสาวคีตะภัทร ภิบาล </string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="number3">
+               <property name="font">
+                <font>
+                 <family>DSN PreeCha</family>
+                 <pointsize>20</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">background-color: rgba(255, 255, 255, 0);</string>
+               </property>
+               <property name="text">
+                <string>รหัสนักศึกษา 116310462005-4</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="faculty3">
+               <property name="font">
+                <font>
+                 <family>DSN PreeCha</family>
+                 <pointsize>20</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">background-color: rgba(255, 255, 255, 0);
+</string>
+               </property>
+               <property name="text">
+                <string>คณะวิศวกรรมศาสตร์ สาขาคอมพิวเตอร์</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QLineEdit" name="searchText">
+    <property name="geometry">
+     <rect>
+      <x>880</x>
+      <y>50</y>
+      <width>200</width>
+      <height>55</height>
+     </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>200</width>
+      <height>55</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <family>DSN RatBuRaNa</family>
+      <pointsize>27</pointsize>
+     </font>
+    </property>
+    <property name="accessibleName">
+     <string>search</string>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border:1 solid rgba(188, 188, 188, 100);
+border-radius:25px; 
+background-color: palette(base);
+pont-size:26;
+padding-left:10;</string>
+    </property>
+    <property name="frame">
+     <bool>true</bool>
+    </property>
+    <property name="dragEnabled">
+     <bool>false</bool>
+    </property>
+    <property name="placeholderText">
+     <string>ค้นหาเมนู</string>
+    </property>
+    <property name="clearButtonEnabled">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="searchButton">
+    <property name="geometry">
+     <rect>
+      <x>1030</x>
+      <y>50</y>
+      <width>61</width>
+      <height>55</height>
+     </rect>
+    </property>
+    <property name="accessibleName">
+     <string>searchButton</string>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#searchButton {
+	border-left:1.5 solid rgba(188, 188, 188, 100);
+	border-top-right-radius:25px; 
+	border-bottom-right-radius:25px; 
+	background-color: palette(base);
+}
+ 
+#searchButton:pressed {
+	border:1.5 solid rgba(188, 188, 188, 100);
+	background-color:rgb(170, 255, 255);
+}
+</string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normalon>assets/img_shop/loupe.png</normalon>
+     </iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>30</width>
+      <height>30</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="BtMenu">
+    <property name="geometry">
+     <rect>
+      <x>-3</x>
+      <y>154</y>
+      <width>223</width>
+      <height>183</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>DSN SukSaWat</family>
+      <pointsize>26</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">* {
+	
+	background-color: rgba(255, 255, 255, 0);
+}</string>
+    </property>
+    <property name="text">
+     <string>MENU</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="BtOrder">
+    <property name="geometry">
+     <rect>
+      <x>-3</x>
+      <y>334</y>
+      <width>223</width>
+      <height>183</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>DSN SukSaWat</family>
+      <pointsize>26</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">* {
+	
+	background-color: rgba(255, 255, 255, 0);
+}</string>
+    </property>
+    <property name="text">
+     <string>ORDER</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="BtAbout">
+    <property name="geometry">
+     <rect>
+      <x>-3</x>
+      <y>517</y>
+      <width>223</width>
+      <height>183</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>DSN SukSaWat</family>
+      <pointsize>26</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">* {
+	
+	background-color: rgba(255, 255, 255, 0);
+}</string>
+    </property>
+    <property name="text">
+     <string>ABOUT US</string>
+    </property>
+   </widget>
+   <zorder>bodyShop</zorder>
+   <zorder>shopName</zorder>
+   <zorder>searchText</zorder>
+   <zorder>searchButton</zorder>
+   <zorder>BtMenu</zorder>
+   <zorder>BtOrder</zorder>
+   <zorder>BtAbout</zorder>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
